@@ -21,11 +21,20 @@ def listDir(dir) :
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('KHITER Med Achraf')
+ print_hi('KHITER Med Achraf')
 
 result = os.listdir(path)
 for x in result:
     print(x)
 print("hhhhhhhhhhhhhhhhh\n\n")
 
-listDir(path )
+listDir(path)
+# verify if a the object is a directory or file with (iddir,isfile)
+print("is it a directory ? \n"+ path + "\n")
+print(os.path.isdir(path))
+
+pathFile ="D:\\Mon travail\\Git & Github\\Pycharm Projects\\PyCharm-Projects\\first project\\main.py"
+
+print("is it a file ? \n"+ pathFile + "\n")
+print(os.path.isfile(pathFile))
+
