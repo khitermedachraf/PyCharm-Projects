@@ -29,7 +29,7 @@ for x in result:
 print("hhhhhhhhhhhhhhhhh\n\n")
 
 listDir(path)
-# verify if a the object is a directory or file with (iddir,isfile)
+# verify if a the object is a directory or file with (isdir,isfile)
 print("is it a directory ? \n"+ path + "\n")
 print(os.path.isdir(path))
 
