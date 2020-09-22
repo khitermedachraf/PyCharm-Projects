@@ -4,6 +4,9 @@
 # Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
 import tkinter as x
 import tkinter.ttk as z
+from tkinter import filedialog
+
+
 def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
@@ -73,6 +76,10 @@ if __name__ == '__main__':
     sous_menu.add_command(label="Sous-menu 3")
     m.add_cascade(label="Menu", menu=sous_menu)
     w2.config(menu=m)
+
+    # Open Files Dialog Box - Python Tkinter GUI Tutorial
+
+
 
     quitter = x.Button(w, text="Quitter", command=w.quit)
     quitter2 = x.Button(w2, text="Quitter", command=w.quit)
