@@ -17,13 +17,10 @@ if __name__ == '__main__':
     fact = (lambda x: 1 if (x == 0) else (x * fact(x - 1)))
     [print(fact(i)) for i in [6,7]]
 
-    #try to compile a simple regex for Zellal USTHB exam
-
-    var = open("secour.txt", 'w')
-    a = 1
-    for i in open(sys.argv[0], 'r'):
-        x = re.search("[.!]??(.$)", i, re.S)
-        var.write("Ligne " + str(a) + " résultat : " + x.group(1))
-        a += 1
+    #try to compile a simple regex for Zellal USTHB exam exo 4 :
+    d = {}
+    for j in zip(*[re.split("\W+", open(sys.argv[1], 'r',).read().lower())[i:] for i in range(int(sys.argv[2]))]):
+        d[j] = d.get(j, 0) + 1
+    [print(" ".join(k) + " " + str(d.get(k)) + "\n") for k in sorted(d) if d.get(k) == int(sys.argv[3]) and re.search("^\w{" + sys.argv[4] + "} (.+ )?\w{" + sys.argv[5] + "}$", " ".join(k))]
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
